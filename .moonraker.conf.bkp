@@ -37,12 +37,12 @@ trusted_clients =
 [history]
 
 [update_manager]
-refresh_interval = 168
+enable_auto_refresh = True
 
-[update_manager mainsail]
+[update_manager client fluidd]
 type = web
-repo = mainsail-crew/mainsail
-path = ~/mainsail
+repo = fluidd-core/fluidd
+path = ~/fluidd
 
 [update_manager crowsnest]
 type = git_repo
