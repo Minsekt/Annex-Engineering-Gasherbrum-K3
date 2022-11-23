@@ -21,7 +21,6 @@ gcode:
 gcode:
     ADAPTIVE_BED_MESH_CALIBRATE
 
-
 #	Notify when ABS Timer is complete
 [delayed_gcode notify_chamber]
 initial_duration: 0
@@ -32,10 +31,8 @@ gcode:
 
 #	Set Temps for chamber warmup when printing with abs 
 [gcode_macro abs_warmup_temp]
-# params:
-    # TEMP
 gcode:
-    {% set TEMP = params.TEMP|default(110) %}
+    {% set TEMP = params.TEMP|default(115) %}
 
     M106 S275					#turn part cooling fan on to blow heat around chamber
     M190 S{TEMP}				#set bed temperature and wait

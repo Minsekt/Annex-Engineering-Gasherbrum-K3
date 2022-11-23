@@ -1,7 +1,5 @@
 #	combined print start gcode macro that takes into account temperature from the slicer
 [gcode_macro print_start]
-# params:
-#   EXTRUDER
 gcode:
     {% set EXTRUDER = params.EXTRUDER|default(275) %}
     {% set BED = params.BED|default(100) %}
